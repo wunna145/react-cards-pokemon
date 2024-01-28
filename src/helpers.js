@@ -1,4 +1,4 @@
-import uuid from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 /* Select a random element from values array. */
 function choice(values) {
@@ -11,7 +11,7 @@ function choice(values) {
 function formatCard(data) {
   return {
     image: data.cards[0].image,
-    id: uuid()
+    id: uuidv4()
   };
 }
 
@@ -20,7 +20,7 @@ function formatCard(data) {
  * and array of relevant stat information. */
 function formatPokemon(data) {
   return {
-    id: uuid(),
+    id: uuidv4(),
     front: data.sprites.front_default,
     back: data.sprites.back_default,
     name: data.name,
